@@ -1,0 +1,44 @@
+.score-container {
+  display: flex;
+  justify-content: center;
+  height: 240px;
+}
+
+.score-subcontainer {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  border: 2px solid $clr5;
+  border-radius: 15px;
+  margin-top: 47px;
+  padding: 20px 30px;
+}
+
+.title-container {
+    width: 200px;
+}
+
+.score-card-container {
+    width: 175px;
+    height: 145px;
+    flex-direction: column;
+    align-items: center;
+    background-color: $clr6;
+    border-radius: 15px;
+}
+
+.score-title {
+    color: $clr4;
+    font-size: rem(20px);
+    font-family: 'barlow-bold';
+    letter-spacing: 1.5px;
+    margin: 15px 0;
+}
+
+.score-number {
+    height: 80px;
+    font-family: 'barlow-bold';
+    font-size: rem(80px);
+    color: $clr5;
+    line-height: 55px;
+}

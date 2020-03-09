@@ -1,0 +1,39 @@
+.rules-modal-screen {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.74);
+  z-index: 1;
+}
+
+.rules-modal {
+  height: 450px;
+  width: 450px;
+  align-items: center;
+  background-color: $clr6;
+  border-radius: 15px;
+}
+
+.modal-title-container {
+  width: 100%;
+  padding: 40px 35px;
+}
+
+.modal-title {
+  color: $clr3;
+  font-size: 34px;
+  font-family: 'barlow-bold';
+}
+
+.rules-img-container {
+  height: 300px;
+  width: 350px;
+
+  img {
+      height: 100%;
+      width: 100%;
+  }
+}

@@ -1,0 +1,20 @@
+// Setup
+@import "setup/variables.scss";
+@import "setup/functions.scss";
+@import "setup/mixins.scss";
+
+// Basics
+@import "basics/helpers.scss";
+@import "basics/layout.scss";
+@import "basics/base.scss";
+@import "basics/buttons.scss";
+@import "basics/typography.scss";
+
+// components
+@import "cmps/Board.scss";
+@import "cmps/RulesBtn.scss";
+@import "cmps/RulesModal.scss";
+@import "cmps/Score.scss";
+
+// pages
+@import "pages/Home.scss";
