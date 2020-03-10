@@ -1,5 +1,57 @@
-.board-container {
-    background-image: url(../../assets/imgs/bg-triangle.svg);
-    background-position: center;
-    background-repeat: no-repeat;
+.icons-container {
+  width: 80%;
+  background-image: url(../../assets/imgs/bg-triangle.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.icon-container {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+
+  img {
+    height: 53%;
+    width: 46%;
+  }
+}
+
+.icon-container:hover {
+  filter: brightness(110%);
+}
+
+.big {
+  height: 300px;
+  width: 300px;
+}
+
+.paper {
+  background-color: hsl(230, 89%, 62%);
+  box-shadow: inset 0px -8px $clr4;
+}
+
+.rock {
+  align-self: flex-end;
+  background-color: hsl(349, 70%, 56%);
+  box-shadow: inset 0px -8px hsl(349, 64%, 45%);
+}
+
+.scissors {
+  background-color: hsl(40, 84%, 53%);
+  box-shadow: inset 0px -8px hsl(39, 82%, 42%);
+}
+
+.icon-inner-container {
+  height: 75%;
+  width: 75%;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  box-shadow: inset 0px 8px lightgray;
+}
+
+.icon-inner-container:hover {
+  filter: brightness(110%);
 }

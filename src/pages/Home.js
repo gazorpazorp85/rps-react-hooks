@@ -15,10 +15,10 @@ export default function Home() {
 
     return (
         <div className="flex column align-center home-container">
-            {toggleRulesModal && <RulesModal onToggle={onToggleRulesModal} />}
             <Score />
             <Board />
             <RulesBtn onToggle={onToggleRulesModal}/>
+            {toggleRulesModal && <RulesModal onToggle={onToggleRulesModal} />}
         </div>
     )
 }
