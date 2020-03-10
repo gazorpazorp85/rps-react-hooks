@@ -20,7 +20,6 @@ export default function GameMode(props) {
     }
 
     const gameOutcome = () => {
-        console.log(GameService.gameOutcome(props.icon, computerIcon));
         const diff = GameService.gameOutcome(props.icon, computerIcon);
         const updatedScore = GameService.updateScore(diff);
         setGameResult(GameService.showGameResult(diff));

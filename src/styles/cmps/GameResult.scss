@@ -23,3 +23,10 @@
   font-family: "barlow-bold";
   margin-bottom: 30px;
 }
+
+@include for-mobile-layout {
+  .game-result-container {
+    position: absolute;
+    bottom: 15%;
+  }
+}

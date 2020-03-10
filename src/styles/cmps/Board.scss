@@ -55,3 +55,31 @@
 .icon-inner-container:hover {
   filter: brightness(110%);
 }
+
+@include for-mobile-layout {
+  .icons-container {
+    width: 100%;
+    padding: unset;
+  }
+
+  .icon-container {
+    height: 150px;
+    width: 150px;
+  }
+
+  .paper, .scissors {
+    margin-top: 10px;
+  }
+
+  .rock {
+    margin-bottom: 10px;
+  }
+
+  .big {
+    height: 120px;
+    width: 120px;
+    margin-top: unset;
+    margin-bottom: unset;
+  }
+
+}

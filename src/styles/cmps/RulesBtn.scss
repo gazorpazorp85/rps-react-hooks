@@ -3,3 +3,9 @@
     width: 100%;
     justify-content: flex-end;
 }
+
+@include for-mobile-layout {
+    .rules-container {
+        height: 54px;
+    }
+}

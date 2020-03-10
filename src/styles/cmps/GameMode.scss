@@ -20,7 +20,28 @@
 }
 
 .panel-title {
-  font-size: 26px;
+  font-size: rem(26px);
   letter-spacing: 1.5px;
   margin-bottom: 60px;
+}
+
+@include for-mobile-layout {
+
+    .game-mode-container {
+        width: 100%;
+    }
+
+    .player-panel-container {
+        margin-top: 30px;
+        margin-right: unset;
+    }
+
+    .computer-panel-container {
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+
+    .panel-title {
+        font-size: rem(14px);
+    }
 }

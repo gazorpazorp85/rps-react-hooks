@@ -28,6 +28,8 @@ function gameOutcome(playerCoin, computerCoin) {
         case 'scissors':
             return (computerCoin.name === 'paper') ? 1 : 
                    (computerCoin.name === 'rock') ? -1 : 0;
+        default:
+            return 0;
     }
 }
 

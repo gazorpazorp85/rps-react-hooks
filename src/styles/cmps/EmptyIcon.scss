@@ -10,3 +10,10 @@
   border-radius: 50%;
   background-color: #192542;
 }
+
+@include for-mobile-layout {
+  .empty-icon-container {
+    height: 120px;
+    width: 120px;
+  }
+}

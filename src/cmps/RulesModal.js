@@ -7,7 +7,7 @@ export default function RulesModal(props) {
     return (
         <div className="rules-modal-screen">
             <div className="flex column rules-modal">
-                <div className="flex space-between modal-title-container">
+                <div className="flex modal-title-container">
                     <div className="uppercase modal-title">rules</div>
                     <div className="pointer" onClick={props.onToggle}>
                         <img src={iconClose} alt="" />

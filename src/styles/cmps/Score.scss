@@ -15,30 +15,67 @@
 }
 
 .title-container {
-    width: 200px;
+  width: 200px;
 }
 
 .score-card-container {
-    width: 175px;
-    height: 145px;
-    flex-direction: column;
-    align-items: center;
-    background-color: $clr6;
-    border-radius: 15px;
+  width: 175px;
+  height: 145px;
+  flex-direction: column;
+  align-items: center;
+  background-color: $clr6;
+  border-radius: 15px;
 }
 
 .score-title {
-    color: $clr4;
-    font-size: rem(20px);
-    font-family: 'barlow-bold';
-    letter-spacing: 1.5px;
-    margin: 15px 0;
+  color: $clr4;
+  font-size: rem(20px);
+  font-family: "barlow-bold";
+  letter-spacing: 1.5px;
+  margin: 15px 0;
 }
 
 .score-number {
-    height: 80px;
-    font-family: 'barlow-bold';
-    font-size: rem(80px);
-    color: $clr5;
-    line-height: 55px;
+  height: 80px;
+  font-family: "barlow-bold";
+  font-size: rem(80px);
+  color: $clr5;
+  line-height: 55px;
+}
+
+@include for-mobile-layout {
+
+  .score-container {
+    height: unset;
+    width: 100%;
+  }
+
+  .score-subcontainer {
+    width: 100%;
+    margin-top: 25px;
+    padding: 10px 10px 10px 20px;
+    border: 3px solid $clr5;
+  }
+
+  .title-container {
+    width: 130px;
+    display: flex;
+    align-items: center;
+  }
+
+  .score-card-container {
+    width: 110px;
+    height: 95px;
+  }
+
+  .score-title {
+    font-size: rem(16px);
+    letter-spacing: 1.5px;
+    margin: 15px 0;
+  }
+  
+  .score-number {
+    font-size: rem(48px);
+    line-height: 17px;
+  }
 }

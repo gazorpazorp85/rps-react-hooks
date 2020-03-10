@@ -25,24 +25,8 @@ h1 {
   font-family: "barlow-bold", sans-serif;
   font-size: rem(49px);
   line-height: 42px;
-  // letter-spacing: -2px;
   margin: 0;
 }
-
-// h2 {
-//   font-family: "nunito-bold", sans-serif;
-//   font-size: rem(40px);
-//   line-height: 48px;
-//   letter-spacing: -1px;
-//   margin: 0;
-// }
-
-// h3 {
-//   font-family: "nunito", sans-serif;
-//   font-size: rem(18px);
-//   line-height: 28px;
-//   margin: 0;
-// }
 
 p {
   margin: 0;
@@ -62,20 +46,9 @@ p {
 }
 
 @include for-mobile-layout {
-  // body {
-  //   font-size: rem(15px);
-  //   line-height: 25px;
-  // }
 
-  // h1 {
-  //   font-size: rem(42px);
-  //   letter-spacing: -1.05px;
-  //   line-height: 48px;
-  // }
-
-  // h2 {
-  //   font-size: rem(28px);
-  //   letter-spacing: -0.7px;
-  //   margin: 0;
-  // }
+  h1 {
+    font-size: rem(26px);
+    line-height: 22px;
+  }
 }
