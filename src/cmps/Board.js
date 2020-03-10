@@ -7,7 +7,7 @@ import iconPaper from '../assets/imgs/icon-paper.svg';
 import iconRock from '../assets/imgs/icon-rock.svg';
 import iconScissors from '../assets/imgs/icon-scissors.svg';
 
-export default function Board() {
+export default function Board(props) {
 
     const [playerChoice, setPlayerChoice] = useState('');
     const [selectedIcon, setSelectedIcon] = useState({});
@@ -29,7 +29,8 @@ export default function Board() {
                 <div className="icons-container">
                     <IconsList icons={icons} onPlayerChoice={onSetPlayerChoice} />
                 </div>
-                : <GameMode playerChoice={playerChoice} icon={selectedIcon} icons={icons}/>}
+                : <GameMode playerChoice={playerChoice} icon={selectedIcon} 
+                            updateScore={props.updateScore} icons={icons}/>}
         </div>
     )
 }

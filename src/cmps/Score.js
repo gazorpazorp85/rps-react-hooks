@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Score (){
+export default function Score (props){
     return (
         <div className="main-container score-container">
             <div className="score-subcontainer">
@@ -9,7 +9,7 @@ export default function Score (){
                 </div>
                 <div className="flex score-card-container">
                     <div className="uppercase score-title">score</div>
-                    <div className="score-number">12</div>
+                    <div className="score-number">{props.score}</div>
                 </div>
             </div>
         </div>
