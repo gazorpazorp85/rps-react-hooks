@@ -1,0 +1,25 @@
+.game-result-container {
+  width: 250px;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-again-button {
+  height: 42px;
+  width: 100%;
+  background-color: $clr6;
+  color: $clr1;
+  border-radius: 10px;
+  letter-spacing: 2px;
+}
+
+.play-again-button:hover {
+  color: palevioletred;
+}
+
+.game-result-title {
+  font-size: 56px;
+  letter-spacing: 2px;
+  font-family: "barlow-bold";
+  margin-bottom: 30px;
+}

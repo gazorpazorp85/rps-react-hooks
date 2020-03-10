@@ -23,14 +23,19 @@ export default function Board(props) {
         setSelectedIcon(selected[0]);
     }
 
+    const resetGame = () => {
+        setPlayerChoice('');
+        setSelectedIcon({});
+    }
+
     return (
         <div className="flex center full main-container">
             {(playerChoice === '') ?
                 <div className="icons-container">
                     <IconsList icons={icons} onPlayerChoice={onSetPlayerChoice} />
                 </div>
-                : <GameMode playerChoice={playerChoice} icon={selectedIcon} 
-                            updateScore={props.updateScore} icons={icons}/>}
+                : <GameMode playerChoice={playerChoice} icon={selectedIcon}
+                    updateScore={props.updateScore} icons={icons} resetGame={resetGame} />}
         </div>
     )
 }

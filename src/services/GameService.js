@@ -2,7 +2,8 @@ export default {
     storeScore,
     loadScore,
     gameOutcome,
-    updateScore
+    updateScore,
+    showGameResult
 }
 
 const KEY = 'score';
@@ -35,4 +36,8 @@ function updateScore(diff) {
     let newScore = score + diff;
     (newScore < 0) ? storeScore(KEY, 0) : storeScore(KEY, newScore);
     return (newScore < 0) ? 0 : newScore;
+}
+
+function showGameResult(diff) {
+    return (diff === 1) ? ' you win' : (diff === -1) ? 'you lose' : 'draw';
 }
