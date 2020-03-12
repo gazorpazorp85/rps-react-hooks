@@ -28,6 +28,14 @@
   width: 300px;
 }
 
+.big:hover {
+  filter: unset;
+
+  .icon-inner-container:hover {
+    filter: unset;
+  }
+}
+
 .paper {
   background-color: hsl(230, 89%, 62%);
   box-shadow: inset 0px -8px $clr4;
@@ -67,7 +75,8 @@
     width: 150px;
   }
 
-  .paper, .scissors {
+  .paper,
+  .scissors {
     margin-top: 10px;
   }
 
@@ -81,5 +90,4 @@
     margin-top: unset;
     margin-bottom: unset;
   }
-
 }
