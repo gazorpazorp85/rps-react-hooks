@@ -41,5 +41,5 @@ function updateScore(diff) {
 }
 
 function showGameResult(diff) {
-    return (diff === 1) ? ' you win' : (diff === -1) ? 'you lose' : 'draw';
+    return (diff === 1) ? 'you win' : (diff === -1) ? 'you lose' : 'draw';
 }

@@ -1,0 +1,77 @@
+.victorious-container {
+  position: absolute;
+  z-index: -4;
+}
+
+.first-circle {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background-color: #2b3956;
+  z-index: -1;
+}
+
+.second-circle {
+  position: relative;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-color: #293251;
+  z-index: -2;
+}
+
+.second-ghost-circle {
+  position: relative;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  z-index: -2;
+}
+
+.third-circle {
+  position: relative;
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
+  background-color: #202d4f;
+  z-index: -3;
+  top: -63px;
+}
+
+.third-ghost-circle {
+  position: relative;
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
+  z-index: -3;
+  top: -63px;
+}
+
+@include for-mobile-layout {
+  .first-circle {
+    height: 170px;
+    width: 170px;
+  }
+  .second-circle {
+    height: 220px;
+    width: 220px;
+  }
+
+  .second-ghost-circle {
+    height: 220px;
+    width: 220px;
+  }
+
+  .third-circle {
+    height: 270px;
+    width: 270px;
+    top: 13px;
+  }
+
+  .third-ghost-circle {
+    height: 270px;
+    width: 270px;
+    top: 13px;
+  }
+}
