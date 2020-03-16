@@ -17,10 +17,10 @@ export default function Board(props) {
     { src: iconScissors, name: 'scissors', _id: 'scissorsIcon' }]
 
     const onSetPlayerChoice = (iconName) => {
-        const selected = icons.filter(icon => icon.name === iconName);
-        selected[0].size = 'big';
+        const selected = icons.find(icon => icon.name === iconName);
+        selected.size = 'big';
         setPlayerChoice(iconName);
-        setSelectedIcon(selected[0]);
+        setSelectedIcon(selected);
     }
 
     const resetGame = () => {

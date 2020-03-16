@@ -14,10 +14,10 @@ export default function GameMode(props) {
 
     const selectComputerIcon = () => {
         const num = Math.floor(Math.random() * 3)
-        const IconName = (num === 0) ? 'rock' : (num === 1) ? 'paper' : 'scissors';
-        const selectedComputerIcon = props.icons.filter(icon => icon.name === IconName);
-        selectedComputerIcon[0].size = 'big';
-        setComputerIcon(selectedComputerIcon[0]);
+        const iconName = (num === 0) ? 'rock' : (num === 1) ? 'paper' : 'scissors';
+        const selectedComputerIcon = props.icons.find(icon => icon.name === iconName);
+        selectedComputerIcon.size = 'big';
+        setComputerIcon(selectedComputerIcon);
     }
 
     const gameOutcome = () => {
@@ -34,8 +34,8 @@ export default function GameMode(props) {
     }
 
     useEffect(() => {
-        let firstTimeout = () => setTimeout(() => selectComputerIcon(), 1000);
-        let secondTimeout = () => setTimeout(() => gameOutcome(), 1000);
+        let firstTimeout = () => setTimeout(() => selectComputerIcon(), 800);
+        let secondTimeout = () => setTimeout(() => gameOutcome(), 500);
         (computerIcon === '') ? firstTimeout() : secondTimeout();
         return () => {
             clearTimeout(firstTimeout, secondTimeout);
