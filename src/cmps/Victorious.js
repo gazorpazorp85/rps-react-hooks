@@ -1,15 +1,25 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Victorious() {
+export default function Victorious(props) {
 
     const [isFirstCircleShown, setIsFirstCircleShown] = useState(false);
     const [isSecondCircleShown, setIsSecondCircleShown] = useState(false);
     const [isThirdCircleShown, setIsThirdCircleShown] = useState(false);
 
+    const firstTimeoutHandler = () => {
+        setIsFirstCircleShown(true);
+        props.audio.play();
+    }
+
+    const thirdTimeoutHandler = () => {
+        setIsThirdCircleShown(true);
+        props.setIsAnimationOver(true);
+    }
+
     useEffect(() => {
-        const firstTimeout = () => setTimeout(() => setIsFirstCircleShown(true), 500);
-        const secondTimeout = () => setTimeout(() => setIsSecondCircleShown(true), 1000);
-        const thirdTimeout = () => setTimeout(() => setIsThirdCircleShown(true), 1500);
+        const firstTimeout = () => setTimeout(() => firstTimeoutHandler(), 300);
+        const secondTimeout = () => setTimeout(() => setIsSecondCircleShown(true), 600);
+        const thirdTimeout = () => setTimeout(() => thirdTimeoutHandler(), 900);
         firstTimeout();
         secondTimeout();
         thirdTimeout();

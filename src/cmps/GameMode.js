@@ -5,12 +5,17 @@ import EmptyIcon from './EmptyIcon';
 import GameResult from './GameResult';
 import Victorious from './Victorious';
 
+import winSound from '../assets/sounds/win.mp3';
+import loseSound from '../assets/sounds/lose.mp3';
+
 import GameService from '../services/GameService';
 
 export default function GameMode(props) {
 
     const [computerIcon, setComputerIcon] = useState('');
     const [gameResult, setGameResult] = useState('');
+    const [isAnimationOver, setIsAnimationOver] = useState(false);
+    const [audio, setAudio] = useState(null);
 
     const selectComputerIcon = () => {
         const num = Math.floor(Math.random() * 3)
@@ -22,9 +27,11 @@ export default function GameMode(props) {
 
     const gameOutcome = () => {
         const diff = GameService.gameOutcome(props.icon, computerIcon);
+        setAudio((diff > 0) ? new Audio(winSound) : (diff < 0) ? new Audio(loseSound) : null);
         const updatedScore = GameService.updateScore(diff);
         setGameResult(GameService.showGameResult(diff));
         props.updateScore(updatedScore);
+        if (diff === 0) setIsAnimationOver(true);
     }
 
     const resetGame = () => {
@@ -39,6 +46,7 @@ export default function GameMode(props) {
         (computerIcon === '') ? firstTimeout() : secondTimeout();
         return () => {
             clearTimeout(firstTimeout, secondTimeout);
+            setIsAnimationOver(false);
         }
     }, [computerIcon]);
 
@@ -46,13 +54,13 @@ export default function GameMode(props) {
         <div className="flex game-mode-container">
             <div className="flex player-panel-container">
                 <div className="uppercase panel-title">you picked</div>
-                {(gameResult === 'you win') ? <Victorious><Icon icon={props.icon} /></Victorious> : ''}
+                {(gameResult === 'you win') ? <Victorious setIsAnimationOver={setIsAnimationOver} audio={audio}><Icon icon={props.icon} /></Victorious> : ''}
                 <Icon icon={props.icon} />
             </div>
-            {(gameResult === '') ? '' : <GameResult gameResult={gameResult} resetGame={resetGame} />}
+            {(gameResult === '') ? '' : <GameResult gameResult={gameResult} resetGame={resetGame} isAnimationOver={isAnimationOver} />}
             <div className="flex computer-panel-container">
                 <div className="uppercase panel-title">the house picked</div>
-                {(gameResult === 'you lose') ? <Victorious><Icon icon={props.icon} /></Victorious> : ''}
+                {(gameResult === 'you lose') ? <Victorious setIsAnimationOver={setIsAnimationOver} audio={audio}><Icon icon={props.icon} /></Victorious> : ''}
                 {(computerIcon === '') ? <EmptyIcon /> : <Icon icon={computerIcon} />}
             </div>
         </div>

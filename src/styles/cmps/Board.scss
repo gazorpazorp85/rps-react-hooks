@@ -60,10 +60,6 @@
   box-shadow: inset 0px 8px lightgray;
 }
 
-.icon-inner-container:hover {
-  filter: brightness(110%);
-}
-
 @include for-mobile-layout {
   .icons-container {
     width: 100%;
@@ -73,6 +69,10 @@
   .icon-container {
     height: 150px;
     width: 150px;
+  }
+
+  .icon-container:hover {
+    filter: unset;
   }
 
   .paper,
